@@ -1,0 +1,60 @@
+<?php
+// manage.contact.php
+
+// Include database connection
+include 'db.php';
+
+// Function to add a new contact
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+
+    // Insert contact into the database
+    $sql = "INSERT INTO contacts (email, phone) VALUES ('$email', '$phone')";
+    if (mysqli_query($conn, $sql)) {
+        echo "New contact added successfully.";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+}
+
+// Fetch existing contacts
+$result = mysqli_query($conn, "SELECT * FROM contact");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Contacts</title>
+</head>
+<body>
+<h1>Manage Contacts</h1>
+<form method="POST" action="">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone" required>
+    <button type="submit">Add Contact</button>
+</form>
+
+<h2>Existing Contacts</h2>
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+    <tr>
+        <td><?php echo $row['email']; ?></td>
+        <td><?php echo $row['phone']; ?></td>
+        <td>
+            <a href="edit_contact.php?id=<?php echo $row['id']; ?>">Edit</a>
+            <a href="delete_contact.php?id=<?php echo $row['id']; ?>">Delete</a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+<a href="admin.php">back to home</a>
+</body>
+</html>

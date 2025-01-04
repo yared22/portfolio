@@ -1,0 +1,68 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #151c20; /* Dark background */
+    color: #f8f8f2; /* Light text color */
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #66d9ef; /* Light blue for headings */
+}
+
+a {
+    color: #f92672; /* Pink for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #444; /* Dark border */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #272822; /* Darker background for header */
+    color: #f8f8f2; /* Light text color */
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a; /* Slightly lighter dark for even rows */
+}
+
+tr:hover {
+    background-color: #444; /* Highlight on hover */
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #272822; /* Dark input background */
+    color: #f8f8f2; /* Light text color */
+}
+
+button {
+    background-color: #66d9ef; /* Light blue for buttons */
+    color: #1e1e1e; /* Dark text color */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5bc0de; /* Slightly darker blue on hover */
+}
