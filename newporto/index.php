@@ -11,7 +11,7 @@ include 'fetch_data.php';
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
+        
         <header class="header">
             <div class="logo">
                 <div style=color:mate black;>Yared</div>

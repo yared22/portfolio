@@ -1,25 +1,16 @@
 <?php
-// edit_project.php
-
-// Include database connection
 include 'db.php';
 
-// Check if the ID is set in the URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-
-    // Fetch the project details from the database
     $result = mysqli_query($conn, "SELECT * FROM projects WHERE id = $id");
     $project = mysqli_fetch_assoc($result);
 }
-
-// Update project if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $description = $_POST['description'];
     $image_url = $_POST['image_url'];
-
-    // Update project in the database
+ 
     $sql = "UPDATE projects SET title='$title', description='$description', image_url='$image_url' WHERE id=$id";
     if (mysqli_query($conn, $sql)) {
         echo "Project updated successfully.";

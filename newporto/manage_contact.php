@@ -1,15 +1,12 @@
 <?php
-// manage.contact.php
-
-// Include database connection
 include 'db.php';
 
-// Function to add a new contact
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    // Insert contact into the database
+  
     $sql = "INSERT INTO contacts (email, phone) VALUES ('$email', '$phone')";
     if (mysqli_query($conn, $sql)) {
         echo "New contact added successfully.";
@@ -18,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fetch existing contacts
+
 $result = mysqli_query($conn, "SELECT * FROM contact");
 ?>
 

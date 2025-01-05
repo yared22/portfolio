@@ -1,16 +1,14 @@
 <?php
-// manage_projects.php
 
-// Include database connection
 include 'db.php';
 
-// Function to add a new project
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $description = $_POST['description'];
 
-    $image_url = $_POST['image_url']; // Capture image URL from the form
-    // Insert project into the database
+    $image_url = $_POST['image_url'];
+    
     $sql = "INSERT INTO projects (title, description, image_url) VALUES ('$title', '$description', '$image_url')";
     if (mysqli_query($conn, $sql)) {
         echo "New project added successfully.";
@@ -19,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fetch existing projects
+
 $result = mysqli_query($conn, "SELECT * FROM projects");
 ?>
 

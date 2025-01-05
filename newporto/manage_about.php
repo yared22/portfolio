@@ -1,15 +1,10 @@
 <?php
-// manage_about.php
-
-// Include database connection
 include 'db.php';
-
-// Function to add or update about information
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $description = $_POST['description'];
 
-    // Insert or update about information in the database
+
     $sql = "INSERT INTO about (title, description) VALUES ('$title', '$description') ON DUPLICATE KEY UPDATE description='$description'";
     if (mysqli_query($conn, $sql)) {
         echo "About information saved successfully.";
@@ -18,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Fetch existing about information
+
 $result = mysqli_query($conn, "SELECT * FROM about LIMIT 1");
 $about = mysqli_fetch_assoc($result);
 ?>

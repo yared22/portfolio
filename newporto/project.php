@@ -1,10 +1,5 @@
 <?php
-// project.php
-
-// Include database connection
 include 'db.php';
-
-// Fetch existing projects
 $result = mysqli_query($conn, "SELECT * FROM projects");
 ?>
 
