@@ -93,13 +93,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <button
-        onClick={() => scrollToSection("about")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer bg-transparent border-none"
-        aria-label="Scroll to about section"
-      >
-        <ChevronDown className="h-8 w-8 text-muted-foreground" />
-      </button>
+      <div className="absolute bottom-8 inset-x-0 flex justify-center">
+        <button
+          onClick={() => scrollToSection("about")}
+          className="animate-bounce cursor-pointer bg-transparent border-none"
+          aria-label="Scroll to about section"
+        >
+          <ChevronDown className="h-8 w-8 text-muted-foreground" />
+        </button>
+      </div>
     </section>
   );
 };
