@@ -41,7 +41,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full hover:text-primary transition-all hover:scale-110"
+              className="rounded-full transition-all hover:scale-110"
               onClick={() =>
                 window.open(
                   "https://github.com/yared22",
@@ -56,7 +56,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full hover:text-primary transition-all hover:scale-110"
+              className="rounded-full transition-all hover:scale-110"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/yared-negassi/",
@@ -71,7 +71,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full hover:text-primary transition-all hover:scale-110"
+              className="rounded-full transition-all hover:scale-110"
               onClick={() =>
                 window.open(
                   "https://discord.gg/yared222",
@@ -86,7 +86,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full hover:text-primary transition-all hover:scale-110"
+              className="rounded-full transition-all hover:scale-110"
               onClick={() =>
                 (window.location.href = "mailto:yarednegassi@gmail.com")
               }

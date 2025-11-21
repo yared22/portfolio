@@ -28,7 +28,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 hover:text-primary transition-all hover:scale-105"
+              className="gap-2 transition-all hover:scale-105"
               onClick={() =>
                 (window.location.href = "mailto:yarednegassi@gmail.com")
               }
@@ -38,7 +38,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 hover:text-primary transition-all hover:scale-105"
+              className="gap-2 transition-all hover:scale-105"
               onClick={() =>
                 window.open(
                   "https://github.com/yared22",
@@ -53,7 +53,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 hover:text-primary transition-all hover:scale-105"
+              className="gap-2 transition-all hover:scale-105"
               onClick={() =>
                 window.open(
                   "https://discord.gg/yared222",
@@ -68,7 +68,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 hover:text-primary transition-all hover:scale-105"
+              className="gap-2 transition-all hover:scale-105"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/yared-negassi/",
