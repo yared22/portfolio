@@ -35,7 +35,7 @@ const projects: Project[] = [
   {
   title: 'OfficeLink Booking Platform',
   description: 'Platform for reserving coworking spaces, meeting rooms, and managing office amenities with ease.',
-  tags: ['HTML', 'CSS', 'PHP', 'MySQL'],
+  tags: ['HTML', 'CSS', 'JavaScript' , 'PHP', 'MySQL'],
     images: [
   '/projects/officelink1.jpg',
   '/projects/officelink2.jpg',
