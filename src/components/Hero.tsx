@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { SiDiscord } from "react-icons/si";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -65,6 +66,21 @@ const Hero = () => {
               }
             >
               <Linkedin className="h-5 w-5" />
+            </Button>
+
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full hover:text-primary transition-all hover:scale-110"
+              onClick={() =>
+                window.open(
+                  "https://discord.gg/yared222",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              <SiDiscord className="h-5 w-5" />
             </Button>
 
             <Button

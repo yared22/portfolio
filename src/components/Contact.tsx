@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { SiDiscord } from "react-icons/si";
 import { Button } from "./ui/button";
 
 const Contact = () => {
@@ -55,7 +56,22 @@ const Contact = () => {
               className="gap-2 hover:text-primary transition-all hover:scale-105"
               onClick={() =>
                 window.open(
-                  "https://https://www.linkedin.com/in/yared-negassi/",
+                  "https://discord.gg/yared222",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              <SiDiscord className="h-5 w-5" />
+              Discord
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="gap-2 hover:text-primary transition-all hover:scale-105"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/yared-negassi/",
                   "_blank",
                   "noopener,noreferrer"
                 )
