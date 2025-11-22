@@ -4,10 +4,12 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import ScrollBackground from '@/components/ScrollBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="relative min-h-screen bg-background text-foreground">
+      <ScrollBackground />
       <Navigation />
       <Hero />
       <About />
