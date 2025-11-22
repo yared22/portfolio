@@ -49,7 +49,7 @@ const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="hover:text-primary transition-colors"
+                className="transition-colors"
               >
                 {item.label}
               </Button>
@@ -75,7 +75,7 @@ const Navigation = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="w-full justify-start hover:text-primary transition-colors"
+                className="w-full justify-start transition-colors"
               >
                 {item.label}
               </Button>
