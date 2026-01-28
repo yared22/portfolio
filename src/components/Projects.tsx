@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     title: 'Reporting Dashboard',
      description: 'Comprehensive data visualization dashboard with CSV uploads, dynamic charts, and weekly reporting system.',
-  tags: ['Vue 3', 'Nuxt', 'Tailwind CSS', 'MySQL', 'RESTful API'],
+  tags: ['Vue 3', 'Nuxt', 'Node', 'Tailwind CSS', 'MySQL', 'RESTful API'],
     images: [
   '/projects/mesmer1.jpg',
   '/projects/mesmer2.jpg',
@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
   title: 'EventEase Booking Platform',
   description: 'Multi-role event management system for booking venues, coordinating freelancers, and managing event logistics.',
-  tags: ['Vue 3', 'Nuxt', 'Tailwind CSS', 'MySQL', 'RESTful API'],
+  tags: ['Vue 3', 'Nuxt', 'Node', 'Tailwind CSS', 'MySQL', 'RESTful API'],
     images: [
   '/projects/eventease1.jpg',
   '/projects/eventease2.jpg',

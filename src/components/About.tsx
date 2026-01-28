@@ -24,7 +24,7 @@ const About = () => {
   </p>
 
   <p>
-    I’ve worked on real-world projects such as dashboards, booking systems, ecommerce platforms using technologies like Vue 3, Nuxt, Node.js, PHP, MySQL, and Java.
+    I’ve worked on real-world projects such as dashboards, booking systems, ecommerce platforms using technologies like Vue 3, react, Nuxt, Next, Node.js, PHP, and MySQL.
     I'm passionate about building systems that solve real problems, especially those involving
     data visualization, automation, and user experience.
   </p>

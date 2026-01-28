@@ -6,22 +6,34 @@ const skills = [
   {
     icon: Layout,
     title: 'Frontend',
-    items: ['Vue 3', 'Nuxt', 'Tailwind CSS', 'Material UI'],
+    items: ['Vue 3', 'react', 'Nuxt','Next.js', 'Tailwind CSS', 'Material UI'],
   },
   {
     icon: Server,
     title: 'Backend',
-    items: ['Node.js', 'RESTful API development', 'CRUD operations'],
+    items: ['Node.js', 
+      'RESTful API development', 
+      'CRUD operations', 
+      'Server-side routing (Nuxt API routes)', 
+      'CSV parsing & data handling', 
+      'Data validation & sanitization'],
   },
   {
     icon: Database,
     title: 'Database',
-    items: ['MySQL', 'SQLite','MongoDB'],
+     items: [
+      'MySQL', 
+      'SQLite', 
+      'MongoDB', 
+      'Database schema design', 
+      'Query optimization', 
+      'Storing & retrieving historical data'
+    ],
   },
   {
     icon: Code2,
     title: 'Languages',
-    items: ['JavaScript (ES6+)', 'HTML5', 'CSS3'],
+    items: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'PHP', 'SQL'],
   },
   {
     icon: Zap,
@@ -31,7 +43,8 @@ const skills = [
 {
     icon: Smartphone,
     title: 'Responsive',
-    items: ['Mobile-First', 'Accessibility', 'SEO', 'Performance'],
+    items: ['Mobile-First', 'Accessibility', 'SEO', 'Performance', 
+      'Cross-browser compatibility'],
   },
 ];
 
