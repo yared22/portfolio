@@ -114,8 +114,9 @@ const ProjectImageCarousel = ({ project }: { project: Project }) => {
       <img
   key={currentImage} 
   src={currentImage}
-  alt={project.title}
+  alt={`${project.title} screenshot showing the project interface and features`}
   className="w-full h-48 object-cover transition-opacity duration-900 opacity-100 group-hover:scale-110"
+  loading="lazy"
 />
       <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-80" />
       {images.length > 1 && (
@@ -124,6 +125,7 @@ const ProjectImageCarousel = ({ project }: { project: Project }) => {
             type="button"
             onClick={showPrev}
             className="h-9 w-9 rounded-full border border-white/20 bg-black/30 text-white flex items-center justify-center text-base shadow-lg backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:-translate-x-0.5 transition-all"
+            aria-label="Previous project image"
           >
             <span className="-mt-0.5">&lt;</span>
           </button>
@@ -131,6 +133,7 @@ const ProjectImageCarousel = ({ project }: { project: Project }) => {
             type="button"
             onClick={showNext}
             className="h-9 w-9 rounded-full border border-white/20 bg-black/30 text-white flex items-center justify-center text-base shadow-lg backdrop-blur-sm hover:bg-white/20 hover:scale-105 hover:translate-x-0.5 transition-all"
+            aria-label="Next project image"
           >
             <span className="-mt-0.5">&gt;</span>
           </button>
@@ -144,7 +147,7 @@ const Projects = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-20 md:py-32">
+    <section id="projects" className="py-20 md:py-32" aria-labelledby="projects-heading">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -152,7 +155,7 @@ const Projects = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-hero-gradient">
+          <h2 id="projects-heading" className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-hero-gradient">
             Featured Projects
           </h2>
           

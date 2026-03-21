@@ -7,7 +7,7 @@ const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-secondary/30">
+    <section id="contact" className="py-20 md:py-32 bg-secondary/30" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
         <div
           ref={ref}
@@ -15,7 +15,7 @@ const Contact = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-hero-gradient">
+          <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-hero-gradient">
             Let's Connect
           </h2>
 
@@ -24,7 +24,7 @@ const Contact = () => {
             opportunities to be part of your visions.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center mb-8">
+          <div className="flex flex-wrap gap-4 justify-center mb-8" role="group" aria-label="Contact methods">
             <Button
               variant="outline"
               size="lg"
@@ -32,6 +32,7 @@ const Contact = () => {
               onClick={() =>
                 (window.location.href = "mailto:yarednegassi@gmail.com")
               }
+              aria-label="Send email to Yared Negassi"
             >
               Email Me
             </Button>
@@ -46,6 +47,7 @@ const Contact = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Visit GitHub profile"
             >
               <Github className="h-5 w-5" />
               GitHub
@@ -61,6 +63,7 @@ const Contact = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Join Discord server"
             >
               <SiDiscord className="h-5 w-5" />
               Discord
@@ -76,17 +79,18 @@ const Contact = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Visit LinkedIn profile"
             >
               <Linkedin className="h-5 w-5" />
               LinkedIn
             </Button>
           </div>
 
-          <div className="pt-8 border-t border-border">
+          <footer className="pt-8 border-t border-border">
             <p className="text-muted-foreground">
               © YARED NEGASSI.  All Rights Reserved.
             </p>
-          </div>
+          </footer>
         </div>
       </div>
     </section>

@@ -52,7 +52,7 @@ const Skills = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-20 md:py-32 bg-secondary/30">
+    <section id="skills" className="py-20 md:py-32 bg-secondary/30" aria-labelledby="skills-heading">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -60,7 +60,7 @@ const Skills = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-hero-gradient">
+          <h2 id="skills-heading" className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-hero-gradient">
             Skills & Expertise
           </h2>
           

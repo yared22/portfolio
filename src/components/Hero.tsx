@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-hero-gradient opacity-10" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--glow)/0.15),transparent_50%)]" />
 
@@ -22,6 +22,7 @@ const Hero = () => {
           </div>
 
           <h1
+            id="hero-heading"
             className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-hero-gradient animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
@@ -37,6 +38,8 @@ const Hero = () => {
           <div
             className="flex gap-4 justify-center pt-4 animate-fade-in"
             style={{ animationDelay: "0.6s" }}
+            role="group"
+            aria-label="Social media links"
           >
             <Button
               variant="outline"
@@ -49,6 +52,7 @@ const Hero = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Visit GitHub profile"
             >
               <Github className="h-5 w-5" />
             </Button>
@@ -64,6 +68,7 @@ const Hero = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Visit LinkedIn profile"
             >
               <Linkedin className="h-5 w-5" />
             </Button>
@@ -79,6 +84,7 @@ const Hero = () => {
                   "noopener,noreferrer"
                 )
               }
+              aria-label="Join Discord server"
             >
               <SiDiscord className="h-5 w-5" />
             </Button>
@@ -90,6 +96,7 @@ const Hero = () => {
               onClick={() =>
                 (window.location.href = "mailto:yarednegassi@gmail.com")
               }
+              aria-label="Send email to Yared Negassi"
             >
               <Mail className="h-5 w-5" />
             </Button>
@@ -102,6 +109,7 @@ const Hero = () => {
             <Button
               onClick={() => scrollToSection("projects")}
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8"
+              aria-label="View my work projects"
             >
               View My Work
             </Button>

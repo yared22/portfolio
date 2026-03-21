@@ -32,29 +32,33 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-transparent'
       }`}
+      aria-label="Main navigation"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-xl font-bold bg-clip-text text-transparent bg-hero-gradient"
+            aria-label="Scroll to top of page"
           >
             Portfolio
           </button>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <ul className="hidden md:flex items-center gap-1" role="menubar">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="transition-colors"
-              >
-                {item.label}
-              </Button>
+              <li key={item.id} role="none">
+                <Button
+                  variant="ghost"
+                  onClick={() => scrollToSection(item.id)}
+                  className="transition-colors"
+                  role="menuitem"
+                >
+                  {item.label}
+                </Button>
+              </li>
             ))}
-          </div>
+          </ul>
           
           {/* Mobile Menu Button */}
           <Button
@@ -62,6 +66,8 @@ const Navigation = () => {
             size="icon"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
@@ -69,18 +75,20 @@ const Navigation = () => {
         
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <ul className="md:hidden py-4 border-t border-border animate-fade-in" role="menu">
             {navItems.map((item) => (
-              <Button
-                key={item.id}
-                variant="ghost"
-                onClick={() => scrollToSection(item.id)}
-                className="w-full justify-start transition-colors"
-              >
-                {item.label}
-              </Button>
+              <li key={item.id} role="none">
+                <Button
+                  variant="ghost"
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full justify-start transition-colors"
+                  role="menuitem"
+                >
+                  {item.label}
+                </Button>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </nav>
