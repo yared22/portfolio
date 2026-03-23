@@ -18,7 +18,7 @@ const About = () => {
 
 <div className="space-y-4 text-muted-foreground text-lg">
   <p>
-    I'm a motivated full stack developer with hands-on experience building practical,
+    I'm a motivated full stack web developer with hands-on experience building practical,
     data-driven applications. I specialize in both frontend and backend development,
     creating clean user interfaces, efficient backend systems, and optimized data workflows.
   </p>
