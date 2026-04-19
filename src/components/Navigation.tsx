@@ -39,7 +39,7 @@ const Navigation = () => {
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="text-xl font-bold bg-clip-text text-transparent bg-hero-gradient"
-            aria-label="Scroll to top of page"
+            aria-label="Portfolio - Scroll to top of page"
           >
             Portfolio
           </button>
