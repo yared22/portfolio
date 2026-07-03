@@ -22,28 +22,28 @@ const skills = [
     icon: Database,
     title: 'Database',
      items: [
+      'PostgreSQL',
       'MySQL', 
       'SQLite', 
       'MongoDB', 
       'Database schema design', 
-      'Query optimization', 
-      'Storing & retrieving historical data'
+      'Query optimization',
     ],
   },
   {
     icon: Code2,
     title: 'Languages',
-    items: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'PHP', 'SQL'],
+    items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'PHP', 'SQL'],
   },
   {
     icon: Zap,
     title: 'Tools',
-    items: ['Git', 'Figma', 'Unit Testing', 'Agile'],
+    items: ['Docker', 'Git', 'Figma', 'Unit Testing', 'Agile'],
   },
 {
     icon: Smartphone,
     title: 'Responsive',
-    items: ['Mobile-First', 'Accessibility', 'SEO', 'Performance', 
+    items: ['Mobile-First', 'Accessibility', 'SEO', 'GEO', 'Performance', 
       'Cross-browser compatibility'],
   },
 ];
