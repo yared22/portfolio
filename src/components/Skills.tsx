@@ -33,7 +33,7 @@ const skills = [
   {
     icon: Code2,
     title: 'Languages',
-    items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'PHP', 'SQL'],
+    items: ['TypeScript','JavaScript (ES6+)', 'HTML5', 'CSS3', 'PHP', 'SQL'],
   },
   {
     icon: Zap,
