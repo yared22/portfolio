@@ -1,4 +1,5 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -8,35 +9,47 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
-          className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
+          className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-hero-gradient">
-  About Me
-</h2>
+          
 
-<div className="space-y-4 text-muted-foreground text-lg">
-  <p>
-    I'm a motivated full stack web developer with hands-on experience building practical,
-    data-driven applications. I specialize in both frontend and backend development,
-    creating clean user interfaces, efficient backend systems, and optimized data workflows.
-  </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="hidden md:flex justify-center md:justify-start">
+              <div style={{ width: '800px', height: '600px' }}>
+                <DotLottieReact
+                  src="/src/assets/developer-skills.lottie"
+                  loop
+                  autoplay
+                />
+              </div>
+            </div>
 
-  <p>
-    I've worked on real-world projects such as dashboards, booking systems, ecommerce platforms using technologies like Vue 3, react, Nuxt, Next, Node.js, PHP, and MySQL.
-    I'm passionate about building systems that solve real problems, especially those involving
-    data visualization, automation, and user experience.
-  </p>
+            <div className="space-y-4 text-muted-foreground text-lg max-w-3xl mx-auto md:max-w-none">
+              <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-hero-gradient">
+            About Me
+          </h2>
+              <p>
+                I'm a motivated full stack web developer with hands-on experience building practical,
+                data-driven applications. I specialize in both frontend and backend development,
+                creating clean user interfaces, efficient backend systems, and optimized data workflows.
+              </p>
 
-  <p>
-    I enjoy learning new tools, especially in web and mobile development, and continually improving
-    my skills in scalable architecture, API design, and app performance. When I'm not coding,
-    I'm exploring new technologies, designing ideas for my next project, or strengthening my
-    mobile development and Flutter skills.
-  </p>
-</div>
+              <p>
+                I've worked on real-world projects such as dashboards, booking systems, ecommerce platforms using technologies like Vue 3, react, Nuxt, Next, Node.js, PHP, and MySQL.
+                I'm passionate about building systems that solve real problems, especially those involving
+                data visualization, automation, and user experience.
+              </p>
 
+              <p>
+                I enjoy learning new tools, especially in web and mobile development, and continually improving
+                my skills in scalable architecture, API design, and app performance. When I'm not coding,
+                I'm exploring new technologies, designing ideas for my next project, or strengthening my
+                mobile development and Flutter skills.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

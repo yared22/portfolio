@@ -32,7 +32,7 @@ const Hero = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            Turning ideas into reliable web applications
+           I turn ideas into reliable digital solutions
           </p>
 
           <div
