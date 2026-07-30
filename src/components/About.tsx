@@ -19,7 +19,7 @@ const About = () => {
             <div className="hidden md:flex justify-center md:justify-start">
               <div style={{ width: '800px', height: '600px' }}>
                 <DotLottieReact
-                  src="/src/assets/developer-skills.lottie"
+                  src="https://lottie.host/93f68957-26cb-4362-ae1a-440ec257502d/Siudr4jizt.lottie"
                   loop
                   autoplay
                 />
