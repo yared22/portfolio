@@ -1,6 +1,7 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
+const developerSkillsAnimation = new URL('../assets/developer-skills.lottie', import.meta.url).href;
 const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
@@ -19,7 +20,7 @@ const About = () => {
             <div className="hidden md:flex justify-center md:justify-start">
               <div style={{ width: '800px', height: '600px' }}>
                 <DotLottieReact
-                  src="https://lottie.host/93f68957-26cb-4362-ae1a-440ec257502d/Siudr4jizt.lottie"
+                  src={developerSkillsAnimation}
                   loop
                   autoplay
                 />

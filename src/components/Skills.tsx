@@ -1,5 +1,5 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Code2, Database, Layout, Server, Smartphone, Zap } from 'lucide-react';
+import { Award, Code2, Database, Layout, Server, ShieldCheck, Sparkles, Wrench, Zap } from 'lucide-react';
 import { Card } from './ui/card';
 
 const skills = [
@@ -41,8 +41,8 @@ const skills = [
     items: ['Docker', 'Git', 'Figma', 'Unit Testing', 'Agile'],
   },
 {
-    icon: Smartphone,
-    title: 'Responsive',
+    icon: ShieldCheck,
+    title: 'Quality & Optimization',
     items: ['Mobile-First', 'Accessibility', 'SEO', 'GEO', 'Performance', 
       'Cross-browser compatibility'],
   },
