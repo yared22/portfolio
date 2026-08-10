@@ -197,7 +197,7 @@ const ContactForm = () => {
 
                   <FormControl>
                     <Input
-                      placeholder="your.email@example.com"
+                      placeholder="you@example.com"
                       type="email"
                       {...field}
                       disabled={isSubmitting}
@@ -221,7 +221,7 @@ const ContactForm = () => {
 
                   <FormControl>
                     <Input
-                      placeholder="What is this about?"
+                      placeholder="What would you like to discuss?"
                       {...field}
                       disabled={isSubmitting}
                     />
