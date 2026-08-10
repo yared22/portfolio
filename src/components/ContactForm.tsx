@@ -134,7 +134,7 @@ const ContactForm = () => {
       <CardHeader>
         <CardTitle>Send a Message</CardTitle>
         <CardDescription>
-          Fill out the form below and I'll get back to you as soon as possible.
+          Got a question, idea, or project in mind? I’d love to hear from you!
         </CardDescription>
       </CardHeader>
 
