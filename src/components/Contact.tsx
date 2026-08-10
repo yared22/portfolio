@@ -2,6 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
 import { Button } from "./ui/button";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -28,7 +29,7 @@ const Contact = () => {
             <Button
               variant="outline"
               size="lg"
-              className="gap-2 transition-all hover:scale-105"
+              className="gap-2 transition-all hover:scale-105 "
               onClick={() =>
                 (window.location.href = "mailto:yarednegassi@gmail.com")
               }
@@ -84,6 +85,10 @@ const Contact = () => {
               <Linkedin className="h-5 w-5" />
               LinkedIn
             </Button>
+          </div>
+
+          <div className="mt-12">
+            <ContactForm />
           </div>
 
           <footer className="pt-8 border-t border-border">
