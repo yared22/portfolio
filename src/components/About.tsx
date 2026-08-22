@@ -32,7 +32,7 @@ const About = () => {
             About Me
           </h2>
               <p>
-                I'm a motivated full stack web developer with hands-on experience building practical,
+                I'm a skilled full stack web developer with hands-on experience building practical,
                 data-driven applications. I specialize in both frontend and backend development,
                 creating clean user interfaces, efficient backend systems, and optimized data workflows.
               </p>
