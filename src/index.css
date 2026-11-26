@@ -96,6 +96,8 @@ All colors MUST be HSL.
   .reaction-diffusion-canvas {
     filter: brightness(0.5) saturate(0.5);
     opacity: 0.4;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 100%);
+    mask-image: linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0.4) 100%);
   }
 
   .light .hero-reaction-diffusion-overlay {
