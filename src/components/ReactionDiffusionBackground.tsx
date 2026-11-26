@@ -4,6 +4,7 @@ const colors = ["#3d7398", "#3f91b6", "#37afc5", "#3dc9c2", "#76e5c4", "#d4fff0"
 const digits = "0123456789";
 const feed = 0.0545;
 const kill = 0.062;
+const driftSpeed = 4;
 
 const ReactionDiffusionBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -56,15 +57,32 @@ const ReactionDiffusionBackground = () => {
       [v, nextV] = [nextV, v];
     };
 
-    const draw = () => {
+    const draw = (time = 0) => {
       context.clearRect(0, 0, width, height);
       context.font = "10px Consolas, 'Courier New', monospace";
       context.textBaseline = "middle";
 
+      const driftY = ((time / 1000) * driftSpeed) % rows;
+      const driftX = ((time / 1000) * driftSpeed * 0.6) % columns;
+
       for (let y = 0; y < rows; y++) {
+        let sampleY = y - driftY;
+        if (sampleY < 0) sampleY += rows;
+        const rowA = Math.floor(sampleY);
+        const rowB = (rowA + 1) % rows;
+        const blendY = sampleY - rowA;
+
         for (let x = 0; x < columns; x++) {
-          const index = y * columns + x;
-          const concentration = Math.min(1, v[index] * 6);
+          let sampleX = x - driftX;
+          if (sampleX < 0) sampleX += columns;
+          const colA = Math.floor(sampleX);
+          const colB = (colA + 1) % columns;
+          const blendX = sampleX - colA;
+
+          const top = v[rowA * columns + colA] * (1 - blendX) + v[rowA * columns + colB] * blendX;
+          const bottom = v[rowB * columns + colA] * (1 - blendX) + v[rowB * columns + colB] * blendX;
+          const sampled = top * (1 - blendY) + bottom * blendY;
+          const concentration = Math.min(1, sampled * 6);
           const shade = Math.min(colors.length - 1, Math.floor(concentration * colors.length));
           const digit = Math.min(9, Math.floor(concentration * 10));
 
@@ -114,11 +132,11 @@ const ReactionDiffusionBackground = () => {
       draw();
     };
 
-    const animate = () => {
+    const animate = (time: number) => {
       animationFrame = window.requestAnimationFrame(animate);
 
       for (let iteration = 0; iteration < 30; iteration++) step();
-      draw();
+      draw(time);
     };
 
     const resizeObserver = new ResizeObserver(resize);
