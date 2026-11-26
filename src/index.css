@@ -91,3 +91,28 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .reaction-diffusion-canvas {
+    filter: brightness(0.5) saturate(0.5);
+    opacity: 0.4;
+  }
+
+  .light .hero-reaction-diffusion-overlay {
+    background-color: transparent;
+  }
+
+  .light .hero-reaction-diffusion-gradient {
+    background-image: linear-gradient(
+      to bottom,
+      hsl(var(--background) / 0.15),
+      transparent 35%,
+      hsl(var(--background) / 0.25)
+    );
+  }
+
+  .light .reaction-diffusion-canvas {
+    filter: brightness(0.9) saturate(2) contrast(1.15);
+    opacity: 0.6;
+  }
+}

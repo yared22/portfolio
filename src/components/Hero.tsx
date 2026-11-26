@@ -12,32 +12,34 @@ const Hero = () => {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background" aria-labelledby="hero-heading">
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <ReactionDiffusionBackground />
-        <div className="absolute inset-0 bg-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/55 to-background" />
+        <div className="hero-reaction-diffusion-overlay absolute inset-0 bg-background/90" />
+        <div className="hero-reaction-diffusion-gradient absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,hsl(var(--glow)/0.12),transparent_55%)]" />
+        <ReactionDiffusionBackground />
       </div>
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center space-y-6 animate-fade-in">
           <div className="inline-block animate-scale-in">
-            <span className="text-primary font-mono text-sm md:text-base">
+            <span className="inline-block rounded-[2px] font-mono text-sm leading-none text-primary md:text-base">
               Hi, I'm
             </span>
           </div>
 
-          <h1
-            id="hero-heading"
-            className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-hero-gradient animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
-            YARED NEGASSI
-          </h1>
+          <div className="mx-auto w-fit max-w-full">
+            <h1
+              id="hero-heading"
+              className="relative z-0 text-4xl md:text-6xl lg:text-7xl font-bold leading-none bg-clip-text text-transparent bg-hero-gradient animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              YARED NEGASSI
+            </h1>
+          </div>
           <p
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in"
+            className="mx-auto w-fit max-w-full text-lg font-medium leading-none text-foreground animate-fade-in md:text-xl"
             style={{ animationDelay: "0.4s" }}
           >
-           I turn ideas into reliable digital solutions
+            I turn ideas into reliable digital solutions
           </p>
 
           <div

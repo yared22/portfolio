@@ -27,9 +27,7 @@ const ReactionDiffusionBackground = () => {
     let v = new Float32Array(0);
     let nextU = new Float32Array(0);
     let nextV = new Float32Array(0);
-    let frame = 0;
     let animationFrame = 0;
-    let lastFrameTime = 0;
 
     const step = () => {
       for (let y = 0; y < rows; y++) {
@@ -66,10 +64,9 @@ const ReactionDiffusionBackground = () => {
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < columns; x++) {
           const index = y * columns + x;
-          const concentration = Math.min(1, v[index] * 3);
+          const concentration = Math.min(1, v[index] * 6);
           const shade = Math.min(colors.length - 1, Math.floor(concentration * colors.length));
-          const digit =
-            (Math.floor(concentration * 9) + x * 3 + y * 7 + Math.floor(frame / 4)) % 10;
+          const digit = Math.min(9, Math.floor(concentration * 10));
 
           context.fillStyle = colors[shade];
           context.fillText(digits[digit], x * cellWidth, (y + 0.5) * cellHeight);
@@ -98,12 +95,12 @@ const ReactionDiffusionBackground = () => {
       nextU = new Float32Array(columns * rows);
       nextV = new Float32Array(columns * rows);
 
-      for (let seed = 0; seed < 18; seed++) {
+      for (let seed = 0; seed < 36; seed++) {
         const centerX = Math.floor(Math.random() * columns);
         const centerY = Math.floor(Math.random() * rows);
 
-        for (let offsetY = -2; offsetY <= 2; offsetY++) {
-          for (let offsetX = -2; offsetX <= 2; offsetX++) {
+        for (let offsetY = -3; offsetY <= 3; offsetY++) {
+          for (let offsetX = -3; offsetX <= 3; offsetX++) {
             const x = (centerX + offsetX + columns) % columns;
             const y = (centerY + offsetY + rows) % rows;
             const index = y * columns + x;
@@ -113,18 +110,14 @@ const ReactionDiffusionBackground = () => {
         }
       }
 
-      for (let iteration = 0; iteration < 40; iteration++) step();
+      for (let iteration = 0; iteration < 600; iteration++) step();
       draw();
     };
 
-    const animate = (time: number) => {
+    const animate = () => {
       animationFrame = window.requestAnimationFrame(animate);
 
-      if (time - lastFrameTime < 1000 / 24) return;
-      lastFrameTime = time;
-      frame++;
-
-      for (let iteration = 0; iteration < 4; iteration++) step();
+      for (let iteration = 0; iteration < 30; iteration++) step();
       draw();
     };
 
@@ -142,7 +135,13 @@ const ReactionDiffusionBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" aria-hidden="true" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="reaction-diffusion-canvas absolute inset-0 h-full w-full"
+      aria-hidden="true"
+    />
+  );
 };
 
 export default ReactionDiffusionBackground;

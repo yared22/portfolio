@@ -45,7 +45,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <button 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="text-xl font-bold bg-clip-text text-transparent bg-hero-gradient"
+            className="text-xl font-bold bg-clip-text text-transparent bg-hero-gradient brightness-150"
             aria-label="Portfolio - Scroll to top of page"
           >
             Portfolio
@@ -58,7 +58,7 @@ const Navigation = () => {
                 <Button
                   variant="ghost"
                   onClick={() => scrollToSection(item.id)}
-                  className="transition-colors"
+                  className="transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
                   role="menuitem"
                 >
                   {item.label}
@@ -70,7 +70,7 @@ const Navigation = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="transition-colors"
+                className="transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
                 aria-label="Toggle theme"
                 role="menuitem"
               >
@@ -85,6 +85,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
               aria-label="Toggle theme"
             >
               {mounted && theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
@@ -93,6 +94,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
               aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
               aria-expanded={isMobileMenuOpen}
             >
@@ -109,7 +111,7 @@ const Navigation = () => {
                 <Button
                   variant="ghost"
                   onClick={() => scrollToSection(item.id)}
-                  className="w-full justify-start transition-colors"
+                  className="w-full justify-start transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
                   role="menuitem"
                 >
                   {item.label}
@@ -120,7 +122,7 @@ const Navigation = () => {
               <Button
                 variant="ghost"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="w-full justify-start transition-colors"
+                className="w-full justify-start transition-colors hover:bg-background/25 hover:text-foreground hover:backdrop-blur-md hover:ring-1 hover:ring-border/60"
                 role="menuitem"
               >
                 {mounted && theme === 'dark' ? (

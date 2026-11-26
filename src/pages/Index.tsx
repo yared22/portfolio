@@ -16,10 +16,12 @@ const Index = () => {
       </a>
       <main id="main-content">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <div className="relative z-[2]">
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
       </main>
     </div>
   );
