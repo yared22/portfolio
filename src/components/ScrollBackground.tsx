@@ -55,7 +55,7 @@ const ScrollBackground = () => {
   const baseTransform = `translate3d(${floatX}px, ${floatY}px, 0) rotate(${rotateZ}deg)`;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-[1] overflow-hidden">
       <div
         className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_0_40px_rgba(56,189,248,0.7)]"
         style={{ transform: baseTransform }}

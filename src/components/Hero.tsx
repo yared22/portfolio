@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { SiDiscord } from "react-icons/si";
+import ReactionDiffusionBackground from "./ReactionDiffusionBackground";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -9,11 +10,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden" aria-labelledby="hero-heading">
-      <div className="absolute inset-0 bg-hero-gradient opacity-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--glow)/0.15),transparent_50%)]" />
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background" aria-labelledby="hero-heading">
+      <div className="absolute inset-0 z-0" aria-hidden="true">
+        <ReactionDiffusionBackground />
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/75 via-background/55 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,hsl(var(--glow)/0.12),transparent_55%)]" />
+      </div>
 
-      <div className="container mx-auto px-4 z-10">
+      <div className="container relative z-10 mx-auto px-4">
         <div className="text-center space-y-6 animate-fade-in">
           <div className="inline-block animate-scale-in">
             <span className="text-primary font-mono text-sm md:text-base">
@@ -117,7 +122,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 inset-x-0 flex justify-center">
+      <div className="absolute inset-x-0 bottom-8 z-10 flex justify-center">
         <button
           onClick={() => scrollToSection("about")}
           className="animate-bounce cursor-pointer bg-transparent border-none"
